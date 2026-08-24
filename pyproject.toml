@@ -1,0 +1,24 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "script-python"
+version = "0.1.0"
+description = "Utilidades personales para organizar archivos y calcular expresiones."
+readme = "README.md"
+requires-python = ">=3.10"
+dependencies = [
+    "flet>=0.24",
+    "Pillow>=10.0",
+    "pillow-heif>=0.16",
+]
+
+[project.scripts]
+calculadora = "script_python.calculadora:main"
+distribuir-archivos = "script_python.distribucion:main"
+mover-archivos = "script_python.mover_archivos:main"
+renombrar-medios = "script_python.renombrar:main"
+
+[tool.setuptools.packages.find]
+where = ["src"]
